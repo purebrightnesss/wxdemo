@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的空间",
+  "backgroundColor": "#00E0AF",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}

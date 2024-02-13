@@ -1,0 +1,94 @@
+
+.BackGrd {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0%;
+  background-color:"#00E0AF";
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0%;
+  background-color:azure;
+}
+.Header{
+  margin-top: 20px;
+  height: 120px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
+.userAvatar{
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: 15rpx;
+}
+.username {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 25rpx;
+}
+.education{
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+.userinfo .panel{
+  margin: 0 auto;
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px 10px 30px;
+}
+.userinfo .panel .panel-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.userinfo .panel .panel-item .number{
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.eachComment{
+  margin: 20rpx auto;
+  width: 700rpx;
+  /* height:200rpx; */
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 10rpx 10rpx 10rpx 10rpx;
+}
+.eachComment .header {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+.eachComment .title {
+  font-weight: 500;
+  font-size: 18px;
+}
+.eachComment image {
+  width: 35rpx;
+  height: 35rpx;
+}
+.eachComment .name, .eachComment .time{
+  color: rgb(163, 163, 163);
+  margin-left: 15rpx;
+  font-size: 14px;
+}
+/* .eachComment .time{ */
+/* } */
+.eachComment .comment {
+  margin-top: 15rpx;
+  overflow-wrap: break-word;
+  color: rgb(163, 163, 163);
+  font-size: 14px;
+}
+.eachComment .footer {
+  margin-top: 15rpx;
+  margin-bottom: 20rpx;
+  color: rgb(163, 163, 163);
+  font-size: 14px;
+}
+.eachComment .footer .save {
+  margin-left: 20rpx;
+}
+

@@ -1,0 +1,94 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				// "navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path" : "pages/bio/bio",
+			"style" : 
+			{
+				// "navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/submit/submit",
+			"style" : 
+			{
+				// "navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/post_art/post_art",
+			"style" : 
+			{
+				// "navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/pszone/pszone",
+			"style" : 
+			{
+				"navigationBarTitleText" : "个人信息",
+				"enablePullDownRefresh" : true
+			}
+		},
+		{
+			"path" : "pages/pszone/psin/psin",
+			"style" : 
+			{
+				"navigationBarTitleText" : "头像",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/myzone/myzone",
+			"style" : 
+			{
+				"navigationBarTitleText" : "我的空间",
+				"backgroundColor": "#00E0AF",
+				"enablePullDownRefresh" : true
+			}
+		}
+	],
+	
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#333",
+		"selectedColor": "#00B386",
+		"list": [
+		      {
+				"text": "主页",
+		        "pagePath": "pages/index/index",
+		        "iconPath": "static/image/message-comments.png",
+				"selectedIconPath": "static/image/message-comments-green.png"
+		      },
+		      {
+		        "text": "发布",
+		        "pagePath": "pages/submit/submit",
+				"iconPath": "static/image/add-btn.png",
+			    "selectedIconPath": "static/image/add-btn-green.png"
+				
+		      },
+		      {
+		        "text": "个人中心",
+		        "pagePath": "pages/bio/bio",
+				"iconPath": "static/image/customer-center.png",
+				"selectedIconPath": "static/image/customer-center-green.png"
+		      }
+		    ]
+	},
+   
+     "globalStyle": {
+     	        "navigationBarTextStyle": "white",
+     			"navigationBarTitleText": "智汇导诊",   //要确保每页处都没设定
+     			"navigationBarBackgroundColor": "#00B386",
+     			"backgroundColor": "#ffffff",
+     			"enablePullDownRefresh": true
+     }
+}

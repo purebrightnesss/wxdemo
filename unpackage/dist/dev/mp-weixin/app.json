@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bio/bio",
+    "pages/submit/submit",
+    "pages/post_art/post_art",
+    "pages/pszone/pszone",
+    "pages/pszone/psin/psin",
+    "pages/myzone/myzone"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "智汇导诊",
+    "navigationBarBackgroundColor": "#00B386",
+    "backgroundColor": "#ffffff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#00B386",
+    "list": [
+      {
+        "text": "主页",
+        "pagePath": "pages/index/index",
+        "iconPath": "static/image/message-comments.png",
+        "selectedIconPath": "static/image/message-comments-green.png"
+      },
+      {
+        "text": "发布",
+        "pagePath": "pages/submit/submit",
+        "iconPath": "static/image/add-btn.png",
+        "selectedIconPath": "static/image/add-btn-green.png"
+      },
+      {
+        "text": "个人中心",
+        "pagePath": "pages/bio/bio",
+        "iconPath": "static/image/customer-center.png",
+        "selectedIconPath": "static/image/customer-center-green.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
