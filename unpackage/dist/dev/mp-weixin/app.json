@@ -6,7 +6,9 @@
     "pages/post_art/post_art",
     "pages/pszone/pszone",
     "pages/pszone/psin/psin",
-    "pages/myzone/myzone"
+    "pages/myzone/myzone",
+    "pages/otherzone/otherzone",
+    "pages/mysearch/mysearch"
   ],
   "subPackages": [],
   "window": {

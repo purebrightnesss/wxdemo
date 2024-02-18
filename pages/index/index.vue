@@ -1,5 +1,20 @@
 <template>
-  <view class="commentchart">
+	
+    <!-- <my-search></my-search> -->
+	
+  <view>
+	  <view class="sch">
+		  <view class="schbox">
+			<navigator url='/pages/mysearch/mysearch' > 
+			  <view class="schcen">
+		  	    <image class="schicon" mode="scaleToFill" src="/static/image/search.png"></image>
+                <view class="schsousuo"> <text class="schtext">搜索</text></view>
+		    </view>
+			</navigator>
+		 </view>
+	  </view>
+	  
+   <view class="commentchart">
     <navigator v-for="item in CommentList" :url="`/pages/post_art/post_art?categorize=${item.categorize}&title=${item.title}&useravatar=${item.useravatar}&username=${item.username}&time=${item.time}&comment=${item.comment}&follow=${item.follow}&save=${item.save}`" :key="item.id" class="eachComment">
       <view class="title">【{{ item.categorize }}】{{ item.title }}</view>
       <view class="header">
@@ -21,6 +36,7 @@
         </text>
       </view>
     </navigator>
+   </view>
   </view>
 </template>
 
@@ -28,6 +44,7 @@
 export default {
   data(){
     return {
+					
       CommentList: [
         {
           id: 1,
@@ -91,6 +108,40 @@ export default {
 </script>
 
 <style scoped>
+	
+  .sch{
+	  background-color:#00B386;
+	  height: 100rpx;
+	  padding:0 10px;
+	  display: flex;
+	  align-items: center;
+	  position: sticky;
+	  top:0;
+  }
+  .schbox{
+	  height: 80rpx;
+	  background-color: #ffffff;
+	  border-radius: 20px;
+	  width: 100%;
+  }
+  .schcen{
+	  margin-left: 250rpx;
+	  display: flex;
+	   flex-direction: row;
+  }
+  .schicon{
+	  width: 50rpx;
+	  height: 50rpx;
+	  margin-top: 20rpx;
+  }
+  .schsousuo{
+	   margin-top: 20rpx;
+  }
+  .schtext{
+	 font-size: 20px;
+	  margin-left: 5px;
+  }
+  
   .eachComment{
     margin: 20rpx auto;
     width: 700rpx;

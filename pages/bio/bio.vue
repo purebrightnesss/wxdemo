@@ -48,7 +48,7 @@
 	</navigator> 
 	
 	<navigator url='/pages/pszone/pszone'  class="Tool">
-		<image src="../../static/image/customer.png" class="Ticon"></image><view class="title">历史记录</view>
+		<image src="../../static/image/icon_history_green.png" class="Ticon"></image><view class="title">历史记录</view>
 		<view class="Tnav">></view>
 	</navigator> 
 	

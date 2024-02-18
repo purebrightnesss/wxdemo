@@ -26,7 +26,7 @@
 			"path" : "pages/post_art/post_art",
 			"style" : 
 			{
-				// "navigationBarTitleText" : "",
+				 "navigationBarTitleText" : "帖子详情",
 				"enablePullDownRefresh" : false
 			}
 		},
@@ -53,6 +53,22 @@
 				"navigationBarTitleText" : "我的空间",
 				"backgroundColor": "#00E0AF",
 				"enablePullDownRefresh" : true
+			}
+		},
+		{
+			"path" : "pages/otherzone/otherzone",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/mysearch/mysearch",
+			"style" : 
+			{
+				"navigationBarTitleText" : "搜索",
+				"enablePullDownRefresh" : false
 			}
 		}
 	],

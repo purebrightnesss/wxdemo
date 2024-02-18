@@ -1,0 +1,27 @@
+
+.mysubmit{
+		margin: 15rpx auto;
+		/* padding: 12rpx; */
+		width: 700rpx;
+}
+.uni-form-item  {
+    		padding: 30rpx 0;
+}
+.uni-form-item .title{
+		font-size: 20px;
+}
+.solid-line {
+		  border: 1px solid #3f3f3f83; /* 设置边框为1px实线，颜色为黑色 */
+		  width: 700rpx; /* 设置元素的宽度 */
+		  height: 1px; /* 设置元素的高度 */
+}
+.uni-input{
+			width: 700rpx;
+			height: 70rpx;
+}
+.textarea{
+		    margin-top: 20rpx;
+			width: 700rpx;
+			height: 400rpx;
+}
+

@@ -1,11 +1,25 @@
 <template>
   <view class="BackGrd">
-   <uni-popup v-model="showPopup">
+   <!-- <uni-popup v-model="showPopup"> -->
          <!-- 弹出层内容 -->
-       
+    
    <view class="container">
+	   <view class="allschnav">
+	    <navigator url='/pages/pszone/pszone'>
+		  <image class="schicon" mode="scaleToFill" src="/static/image/more.png"></image>
+		 </navigator> 
+		 
+		 <navigator url='/pages/pszone/pszone'>
+		   <image class="schicon" mode="scaleToFill" src="/static/image/search.png"></image>
+		  </navigator>
+		  
+		  <navigator url='/pages/pszone/pszone'>
+		    <image class="schicon" mode="scaleToFill" src="/static/image/message-language.png"></image>
+		   </navigator>
+	   </view> 
+	
 	<view class="Header">
-	    <view><!-- <navigator url='/pages/myzone/myzone' > -->
+	    <view class="person"><!-- <navigator url='/pages/myzone/myzone' > -->
 		<image class="userAvatar" mode="scaleToFill" src="/static/image/user.png"></image>
 		<!-- </navigator> -->
 		
@@ -18,10 +32,12 @@
 	        <text>{{major}}</text>
 	      </view> --> 
 	    </view>
-	
+		
+	<view class="header-right">
 	<view class="userinfo">
+		
 	    <view class="panel">
-	     
+		 
 		  <view class="panel-item">
 	        <text class="number">{{following}}</text>
 			<navigator url='/pages/pszone/pszone' >关注</navigator> 
@@ -44,6 +60,14 @@
 	    </view>
 	</view>
 	
+	<view class="myedit">
+	<navigator url='/pages/pszone/pszone'>
+	   <button type="primary" style="height: 55rpx;font-size: 15px;
+	    line-height: 55rpx;" >编辑资料</button>
+	 </navigator>
+	</view>
+	
+	</view>
 	</view>
 
 	
@@ -75,7 +99,7 @@
 	</view>
 	
    </view>  
-   </uni-popup>
+   <!-- </uni-popup> -->
   </view>
    
 </template>
@@ -172,15 +196,32 @@
 	  margin-top: 0%;
 	  background-color:azure;
 	}
-	
+	.allschnav{
+		width: 730rpx;
+		height: 50rpx;
+		margin-top: 20rpx;/* 
+		 display: flex;
+		justify-content: flex-end;
+		margin-right: 20rpx; */
+	}
+	.schicon{
+		  width: 50rpx;
+		  height: 50rpx;
+		  /* margin-top: 20rpx;*/
+		  float:right; 
+		  margin-right: 20rpx; 
+	}
 	.Header{
-	  margin-top: 20px;
+	  margin-top: 0;
 	  height: 120px;
+	  width: 750rpx;
 	  display: flex;
 	  align-items: flex-start;
 	  justify-content: left;
 	}
-	
+	.person{
+		margin-left: 20rpx;
+	}
 	.userAvatar{
 	  width: 150rpx;
 	  height: 150rpx;
@@ -198,8 +239,8 @@
 	}
 	
 	.userinfo .panel{
-	  margin: 0 auto;
-	  width: 280px;
+	  margin:0 auto;
+	  width: 450rpx;
 	  display: flex;
 	  justify-content: space-between;
 	  padding: 15px 30px 10px 30px;
@@ -214,7 +255,29 @@
 	  font-size: 20px;
 	  margin-bottom: 5px;
 	}
-	
+	/* {
+		height: 60rpx;
+		width: 350rpx;
+		border: 1px solid #3f3f3f83;
+		border-radius: 10px;
+	}
+	.myeditfont{
+		font-size: 20px;
+		margin-top: 5px;
+		} */
+	.myedit {
+	    position: absolute;
+	    right: 50rpx;
+		top: 220rpx;
+	    padding: 0;
+	    font-size: 12px;
+	    line-height: 55rpx;
+	    width: 220rpx;
+	    height: 35rpx;
+	}
+	.issize{
+		height: 55rpx;
+	}
 	.eachComment{
 	  margin: 20rpx auto;
 	  width: 700rpx;
