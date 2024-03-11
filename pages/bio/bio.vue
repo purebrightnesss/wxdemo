@@ -1,4 +1,21 @@
 <template>
+	
+<!-- 	<view class="beforeLogin" v-if="isShow">
+	  <image class="defaultAvatar" mode="scaleToFill" src="/static/image/login.png"></image>
+	   <form @submit="login">
+	        <label for="username">用户名:</label>
+	        <input type="text" id="username" v-model="username">
+	  
+	        <label for="password">密码:</label>
+	        <input type="password" id="password" v-model="password">
+	  
+	        <button type="submit">登录</button>
+	      </form>
+	  <button class="logbutton" hover-class="is-hover" @click="setIsShow()">登录</button>
+	  <navigator url='/pages/register/register'>注册</navigator>
+	</view> -->
+	
+   <!-- <view class="afterLogin" v-else-if="!isShow"> -->
    <view class="container">
 	<view class="header">
 	    <navigator url='/pages/myzone/myzone' >
@@ -74,14 +91,15 @@
 	  </view>
 	
 	
-	  
-   </view>  
+	</view>  
+   <!-- </view>  -->
 </template>
 
 <script>
 	export default{
 		data(){
 			return {
+				// isShow:true,
 				name: 'tourist',
 				campus:'哈尔滨工程大学',
 				level:'本科生',
@@ -90,7 +108,8 @@
 				fan:"34",
 				like:"56",
 				star:"78",
-				
+				user:'',
+				usermsg:'',
 				
 				// Tools: [
 				//     {id: 1,addr:"pszone", img:'customer',title: "个人信息"},
@@ -100,12 +119,76 @@
 				//     {id: 5,addr:"pszone", img:'customer',title: "退出登录"},
 				// ]
 			}
+		},
+		onLoad() {
+			this.getperson();
+		},
+		methods:{
+			// setIsShow(){
+			//     this.setData({
+			//       isShow:false
+			//     })
+			//   },
+			getperson()
+			{
+			try {
+				const value = uni.getStorageSync('token');
+				if (value) {
+					console.log(value);
+					const baseUrl = "https://api.watercuckoo.top"
+					uni.request({
+					  url: baseUrl + '/user/' + id,
+					  method: 'GET', // 根据需要设置请求方法，例如 GET、POST 等
+					  header: {
+					   'Authorization': `Bearer ${token}`,
+					  },
+					  success: function (res) {
+						this.user = res.data;
+						this.userMsg = res.message
+					    console.log(res.data);
+					  },
+					  fail: function (err) {
+					    console.error(err);
+					  }
+					});
+				}
+			} catch (e) {
+				console.log(err);
+			}
+			
+			
+			
+			
+		    }
 		}
 	}
 	
 </script>
 
 <style>
+	/* .beforeLogin {
+	  height: 1000rpx;
+	  display: flex;
+	  align-items: center;
+	  flex-direction: column;
+	  justify-content: center;
+	}
+	.beforeLogin .defaultAvatar {
+	  width: 200rpx;
+	  height: 200rpx;
+	  margin-bottom: 30px;
+	}
+	.beforeLogin .logbutton {
+	  color: white;
+	  background-color: #00B386;
+	  width: 350rpx;
+	  height: 100rpx;
+	  line-height: 70rpx;
+	  border-radius: 30px;
+	} */
+
+
+
 	.container {
 	  display: flex;
 	  flex-direction: column;

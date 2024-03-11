@@ -15,7 +15,9 @@
             <br>
             <text class="time">{{ time }}</text>
         </view>
+		
         <button type="primary" @click="followuser" :plain="isFollowed">{{ followstring }}</button>
+		
       </view>
       <view class="article">
         <rich-text :nodes="articleContent"></rich-text>
@@ -29,7 +31,32 @@
       </view>
   </view>
   
-
+  <view style="background-color:#00B386;
+	  height: 80rpx;
+	  padding:0 10px;
+	  display: flex;
+	  justify-content: flex-start;
+	  position: sticky;
+	  bottom:0;">
+	  <button style=" 
+	   font-size: 18px;
+	  line-height: 65rpx;
+	  height: 70rpx;
+	  background-color: #ffffff;
+	  border-radius: 20px;
+	  width:70%; margin-top: 5rpx; margin-left: 10rpx;" @click="open" >评论</button>
+  <uni-popup ref="popup" type="dialog">
+  	<uni-popup-dialog title="评论" placeholder="发表我的见解~" mode="input" message="成功消息" :duration="2000" :before-close="true" @close="close" @confirm="confirm"></uni-popup-dialog>
+  </uni-popup>
+  <image style="width: 70rpx;
+	  height: 70rpx;
+	  margin-top: 3rpx ;" mode="scaleToFill" src="/static/image/good.png"></image>
+  <image style="width: 70rpx;
+	  height: 70rpx;
+	  margin-top: 3rpx; margin-left: 10rpx" mode="scaleToFill" src="/static/image/star.png"></image>
+  	</view>
+  
+  
   
   </view>
 </template>
@@ -55,6 +82,7 @@ export default {
         }
     },
     onLoad(options) {
+		this.getPost()
         this.categorize = options.categorize
         this.title = options.title
         this.useravatar = options.useravatar
@@ -71,7 +99,44 @@ export default {
                 this.followstring = "已关注"
             else
                 this.followstring = "+ 关注"
-        }
+        },
+		
+		//获取详细页贴文
+		getPost(){
+			uni.request({
+				url:"https://api.watercuckoo.top/post/{1}",
+			    success:res=>{
+				console.log(res)
+			}
+			})
+			
+		},
+		
+		open() {
+					this.$refs.popup.open()
+				},
+				/**
+				 * 点击取消按钮触发
+				 * @param {Object} done
+				 */
+				close() {
+					// TODO 做一些其他的事情，before-close 为true的情况下，手动执行 close 才会关闭对话框
+					// ...
+					this.$refs.popup.close()
+				},
+				/**
+				 * 点击确认按钮触发
+				 * @param {Object} done
+				 * @param {Object} value
+				 */
+				confirm(value) {
+					// 输入框的值
+					console.log(value)
+					// TODO 做一些其他的事情，手动执行 close 才会关闭对话框
+					// ...
+					this.$refs.popup.close()
+				}
+		
     }
 }
 </script>

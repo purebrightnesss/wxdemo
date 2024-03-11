@@ -55,9 +55,37 @@
 		data(){
 			return {
 			}
-		}
-	}
+		},
 	
+	// onLoad() {
+	// 	this.signup()
+	// },
+	methods: {
+		
+		// signup(){
+		// 	uni.request({
+		// 		url:"https://api.watercuckoo.top/user/signup",
+		// 		method:'PUT',
+		// 		data: {
+		// 		     "username": "yk",
+		// 		        "password": "test123",
+		// 		        "avatar": "http://dummyimage.com/100x100",
+		// 		        "name": "yk",
+		// 		        "phone": "12345678901",
+		// 		        "email": "123456@qq.com",
+		// 		        "career": "在读学生",
+		// 		        "qualification": "本科",
+		// 		        "graduate": "哈尔滨工程大学",
+		// 		        "workplace": "无"
+		// 		  },
+		// 	    success:res=>{
+		// 		console.log(res)
+		// 	}
+		// 	})
+			
+		// }
+	}
+}
 </script>
 
 <style>

@@ -13,7 +13,7 @@
 	  height: 80rpx;
 	  background-color: #ffffff;
 	  border-radius: 20px;
-	  width: 100%;
+	  width: 700rpx;
 }
 .schcen.data-v-57280228{
 	  margin-left: 250rpx;

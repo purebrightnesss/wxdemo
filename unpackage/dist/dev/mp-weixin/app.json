@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/index/index",
     "pages/bio/bio",
     "pages/submit/submit",
@@ -8,7 +9,9 @@
     "pages/pszone/psin/psin",
     "pages/myzone/myzone",
     "pages/otherzone/otherzone",
-    "pages/mysearch/mysearch"
+    "pages/mysearch/mysearch",
+    "pages/register/register",
+    "pages/secret/secret"
   ],
   "subPackages": [],
   "window": {

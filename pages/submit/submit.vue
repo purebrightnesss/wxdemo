@@ -43,8 +43,8 @@
 					</view>
 					<!-- 下部按钮 -->
 					<view class="uni-btn-v">
-						<button type="primary" form-type="submit">发布</button>
-						<button type="default" form-type="reset">重置</button>
+						<button type="primary" style=" width:300rpx" form-type="submit">发布</button>
+						<button style="margin-top: 20rpx; width:300rpx" type="default" form-type="reset">重置</button>
 					</view>
 				</form>
 			</view>

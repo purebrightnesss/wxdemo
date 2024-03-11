@@ -4,14 +4,15 @@
 	
   <view>
 	  <view class="sch">
+		  <navigator style=" border-radius: 20px" url='/pages/mysearch/mysearch' > 
 		  <view class="schbox">
-			<navigator url='/pages/mysearch/mysearch' > 
+			
 			  <view class="schcen">
 		  	    <image class="schicon" mode="scaleToFill" src="/static/image/search.png"></image>
                 <view class="schsousuo"> <text class="schtext">搜索</text></view>
 		    </view>
-			</navigator>
 		 </view>
+		 </navigator>
 	  </view>
 	  
    <view class="commentchart">
@@ -103,7 +104,28 @@ export default {
         },
       ]
     }
-  }
+  },
+  onLoad() {
+  	this.getpost()
+  },
+  
+		methods: {
+			getpost(){
+					// this.$refs.form.validate().then(res=>{
+				const baseUrl = "https://api.watercuckoo.top"
+				uni.request({
+					url:baseUrl + '/post/home',
+					method: 'GET', // 请求方法设置为 GET
+					  success: (res) => {
+					    console.log(res.data); // 处理返回的贴文数据
+					  },
+					  fail: (err) => {
+					    console.error(err); // 处理请求失败
+					  }
+				})
+					// })
+			}
+		}
 }
 </script>
 
@@ -122,7 +144,7 @@ export default {
 	  height: 80rpx;
 	  background-color: #ffffff;
 	  border-radius: 20px;
-	  width: 100%;
+	  width: 700rpx;
   }
   .schcen{
 	  margin-left: 250rpx;

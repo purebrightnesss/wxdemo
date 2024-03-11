@@ -59,8 +59,11 @@
 	    </view>
 	</view>
 	
-	<button type="primary" >{{ followstring }}</button>
-	<!-- @click="followuser" :plain="isFollowed" -->
+	<!-- <uni-fav class="fav" bg-color="#00B386" bg-color-checked="#f8f8f8" fg-color="#ffffff" fg-color-checked="#00B386" :star="false" :checked="checkList" :content-text="contentText" @click="favClick()" /> -->
+	
+	
+	<button type="primary" 	@click="followuser" :plain="isFollowed">{{ followstring }}</button>
+
 	</view>
 	</view>
 
@@ -113,7 +116,12 @@
 				star:"78",
 				isFollowed: false,
 				followstring: "+ 关注",
-				
+				checkList: false,
+								contentText: {
+									contentDefault: '+ 关注',
+									contentFav: '已关注'
+								},
+								
 				CommentList: [
 				  {
 				    id: 1,
@@ -173,16 +181,23 @@
 				],
 				
 			}
-		}
-      // methods: {
-      //     followuser(){
-      //         this.isFollowed = !this.isFollowed
-      //         if(this.isFollowed)
-      //             this.followstring = "已关注"
-      //         else
-      //             this.followstring = "+ 关注"
-      //     }
-      // }
+		},
+		// methods: {
+		// 			favClick() {
+		// 				this.checkList = !this.checkList
+		// 				console.log(this.checkList);
+		// 				this.$forceUpdate()
+		// 			}
+		// 		}
+      methods: {
+          followuser(){
+              this.isFollowed = !this.isFollowed
+              if(this.isFollowed)
+                  this.followstring = "已关注"
+              else
+                  this.followstring = "+ 关注"
+          }
+      }
 	}
 	
 </script>
@@ -245,6 +260,16 @@
 	.header-right{
 		display: flex;
 		flex-direction: column;
+	}
+	.fav {
+	    position: absolute;
+	    right: 50rpx;
+		top: 220rpx;
+	    padding: 0;
+	    font-size: 12px;
+	    line-height: 55rpx;
+	    width: 220rpx;
+	    height: 55rpx;
 	}
 	.header-right button {
 	    position: absolute;
